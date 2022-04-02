@@ -1,0 +1,15 @@
+#*****************************************************************************
+# DESCRIPTION: Verilator top level: Makefile pre-configure version
+#
+# Code available from: https://verilator.org
+
+srcdir = @srcdir@
+VPATH = @srcdir@
+
+#### End of system configuration section. ####
+######################################################################
+
+SUBDIRS = src
+
+default: all
+all: vvtest1
