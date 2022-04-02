@@ -8,7 +8,7 @@ AC_INIT([Vvtest1],[4.221 devel],
 # Then 'make maintainer-dist'
 
 AC_CONFIG_HEADER(src/config_build.h)
-AC_CONFIG_FILES(Makefile verilator-config-version.cmake)
+AC_CONFIG_FILES(Makefile include/verilated_config.h verilator-config-version.cmake)
 
 # Version
 AC_MSG_RESULT([configuring for $PACKAGE_STRING])
