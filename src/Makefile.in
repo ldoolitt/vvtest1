@@ -1,0 +1,17 @@
+srcdir = @srcdir@
+PYTHON3 = @PYTHON3@
+vpath %.h @srcdir@
+
+UNDER_GIT = $(wildcard ${srcdir}/../.git/logs/HEAD)
+
+ifneq ($(VERILATOR_NO_OPT_BUILD),1)  # Faster laptop development... don't rebuild each commit
+ ifneq ($(UNDER_GIT),)  # If local git tree... else don't burden users
+GIT_CHANGE_DEP = ${srcdir}/../.git/logs/HEAD
+ endif
+endif
+
+prefiles::
+prefiles:: config_rev.h
+# This output goes into srcdir if locally configured, as we need to distribute it as part of the kit.
+config_rev.h:   ${srcdir}/config_rev $(GIT_CHANGE_DEP)
+	$(PYTHON3) ${srcdir}/config_rev ${srcdir} >$@
