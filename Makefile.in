@@ -9,10 +9,13 @@ VPATH = @srcdir@
 #### End of system configuration section. ####
 ######################################################################
 
-CXXFLAGS = -Wall -I include
+# CXXFLAGS = -Wall -I include
 
 default: all
 all: vvtest1
+
+vvtest1:
+	make -C src
 
 clean:
 	rm -f vvtest1

@@ -1,9 +1,9 @@
-srcdir = @srcdir@
-PYTHON3 = @PYTHON3@
+srcdir = .
+PYTHON3 = /usr/bin/python3
 incdir = $(srcdir)/../include
 
-vpath %.h @srcdir@
-vpath %.cpp @srcdir@
+vpath %.h .
+vpath %.cpp .
 CXXFLAGS = -Wall -I $(incdir) -I .
 
 UNDER_GIT = $(wildcard ${srcdir}/../.git/logs/HEAD)
