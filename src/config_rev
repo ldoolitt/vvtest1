@@ -47,4 +47,4 @@ print("static const char* const DTVERSION_rev = \"" + rev + "\";")
 
 # Warn after the print, so at least the header has good contents
 if re.search('UNKNOWN', rev):
-    print("%Warning: No git revision found in config_rev.py", file=sys.stderr)
+    print("%Warning: No git revision found in config_rev", file=sys.stderr)
