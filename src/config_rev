@@ -22,6 +22,9 @@ Args = parser.parse_args()
 
 os.chdir(Args.directory)
 
+# test 1 $Format:%%$  literal %?
+# test 1 $Format:%h$  hash == commit ID?
+# test 1 $Format:%D$  tag?
 rev = 'UNKNOWN_REV'
 data = os.popen('git describe').read()
 

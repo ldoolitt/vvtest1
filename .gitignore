@@ -1,4 +1,5 @@
 *.log
+.*.swp
 autom4te.cache
 configure
 /Makefile
