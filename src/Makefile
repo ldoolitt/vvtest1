@@ -4,7 +4,7 @@ incdir = $(srcdir)/../include
 
 vpath %.h .
 vpath %.cpp .
-CXXFLAGS = -Wall -I $(incdir) -I .
+CXXFLAGS = -Wall -I ../include -I . -I $(incdir)
 
 UNDER_GIT = $(wildcard ${srcdir}/../.git/logs/HEAD)
 
