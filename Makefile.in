@@ -18,4 +18,4 @@ vvtest1:
 	make -C src
 
 clean:
-	rm -f vvtest1
+	rm -f src/vvtest1
