@@ -16,4 +16,15 @@ If any files leak from here to the outside world, I don't want people
 to think that this is actually supposed to have any verilator functionality.
 Not confusing at all.
 
+Basic usage:
+```
+autoconf
+./configure
+make
+src/vvtest1
+```
+But then also try other combinations and variations like out-of-tree,
+and using github snapshots of a tagged version.
+The only feature of the vvtest1 program is to print its version.
+
 Larry Doolittle, April 2022
